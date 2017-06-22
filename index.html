@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Handibot 2</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="css/pure-min.css" rel="stylesheet">
+    <link href="css/forms-min.css" rel="stylesheet">
+    <link href="css/grids-responsive-min.css" rel="stylesheet">
+
+  </head>
+  <body>
+	<script src="js/lib/jquery.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/fabmo.js"></script>
+  	<script type="text/javascript">
+  		var fabmo = new FabMoDashboard();
+      var editor;
+      var lang="gcode";
+      var source=null;
+      var source_data=null;
+      var job_description=null;
+      var job_title=null;
+  	</script>
+
+    <div class="container">
+      <!-- Nav tabs -->
+	  <ul class="nav nav-tabs" role="tablist">
+<!--      <li class="active"><a href="#tab-measure" role="tab" data-toggle="tab">Quick-Bit</a></li>
+      <li><a class="long" href="#tab-settings" role="tab" data-toggle="tab">Settings</a></li>
+        <li><a class="long" id="config-tab-link" href="#tab-config" role="tab" data-toggle="tab">HELP</a></li>
+-->
+      </ul>
+
+      <div class="tab-content">
+        <!-- Quick-Bit/start pane -->
+        <div class="tab-pane active" id="tab-measure">
+            <h2 class="long"><strong>Handibot 2 Cut Files</strong></h2>
+        <div>
+            <p class="long"> </p>
+			<h3><a class="btn btn-default btn-lg" id="run-004766001"> <img src="images/1004766001.png" width="90%"/> 
+			<a class="btn btn-default btn-lg" id="run-004766002"> <img src="images/1004766002.png" width="90%"/>
+			<a class="btn btn-default btn-lg" id="run-004766003"> <img src="images/1004766003.png" width="90%"/>
+			<a class="btn btn-default btn-lg" id="run-004766004"> <img src="images/1004766004.png" width="90%"/>
+			<a class="btn btn-default btn-lg" id="run-004766005"> <img src="images/1004766005.png" width="90%"/>
+			<a class="btn btn-default btn-lg" id="run-004766006"> <img src="images/1004766006.png" width="90%"/>
+			<a class="btn btn-default btn-lg" id="run-004766007"> <img src="images/1004766007.png" width="90%"/>
+			<a class="btn btn-default btn-lg" id="run-004766008"> <img src="images/1004766008.png" width="90%"/>
+			<a class="btn btn-default btn-lg" id="run-004766009"> <img src="images/1004766009.png" width="90%"/>
+			<a class="btn btn-default btn-lg" id="run-004766010"> <img src="images/1004766010.png" width="90%"/>
+			<a class="btn btn-default btn-lg" id="run-004766011"> <img src="images/1004766011.png" width="90%"/></h3>
+
+			  
+            </div>
+				<div class="pure-u-1 pure-u-md-1-2 image-container">
+          <div class="image-wrapper">
+            <p class='diameter-id'></p>
+            <p class='depth-id'></p>
+          </div>
+        </div>  
+            <div>
+  <!--
+              <h3><a class="btn btn-success" id="call-reset-z-off"> Reset Value for Zeroing Plate Height </a> </h3>
+                <p>You may find it necessary, on occasion, to adjust the value for the distance between the Zeroing plate and the material surface that is used to compute the "cutter-length-offset". This routine will step you through the process of getting the correct plate height.</p>
+-->
+            </div>  
+        </div><!-- start pane -->
+
+        
+
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/fabmo.js"></script>
+  	<script type="text/javascript">
+  		var fabmo = new FabMoDashboard();
+  	</script>
+    <script src="js/control.js"></script>
+    <script src="js/preferences.js"></script>
+    <script src="js/helptab.js"></script>
+    <script src="js/actions.js"></script>
+	<script src="js/util.js"></script>
+   
+
+    <script type="text/javascript">
+        // Prevent a stray enter key from inadvertently submitting a form (and setting the tool in motion!)
+        $(document).ready(function() {
+          fabmo.getAppConfig(function(err,config){
+              var doclength = config.doclength || "long";
+              that = doclength;
+              if(that==='short') {
+                $('#short').prop("checked", true);
+              }
+              else {
+                $('#long').prop("checked", true);
+              }
+              updateConsolidation();
+            $(window).keydown(function(event){
+              if(event.keyCode == 13) {
+                event.preventDefault();
+                return false;
+              }
+            });
+            $('#doclength').change(function(){
+                that = $('input[name="doclength"]:checked').val();
+                updateConsolidation();
+              });
+          });
+        });
+    </script>
+	<script src="js/macrofile.js"></script>
+    <script type="text/javascript">
+        fabmo.hideDRO();
+    </script>
+
+    <script type="text/javascript">
+        // Prevent a stray enter key from inadvertently submitting a form (and setting the tool in motion!)
+        $(document).ready(function() {
+          $(window).keydown(function(event){
+            if(event.keyCode == 13) {
+              event.preventDefault();
+              return false;
+            }
+          });
+        });
+    </script>
+  </body>
+</html>
